@@ -84,23 +84,24 @@ public class ventana extends  JFrame  implements ActionListener{
            
           
         }
-  if(a.getSource() == operacion3){
-     
-     
-     String palabra = campo1.getText();
-     String palabra1 = campo2.getText();
-            String sCadenaInvertida = "";
-            String CadenaInvertida = " ";
-     for (int x=palabra.length()-1;x>=0;x--)
-	  sCadenaInvertida = sCadenaInvertida + palabra.charAt(x);
-     for (int x=palabra1.length()-1;x>=0;x--)
-	  CadenaInvertida = CadenaInvertida + palabra1.charAt(x);
-     
-     campo3.setText(sCadenaInvertida+CadenaInvertida);
-    
-     
-     }
+
+     // boton 4-----------------------------------------------------------------------------------------------
+     if(a.getSource() == operacion4){
+            double resultado;
+            double opera1 = Integer.parseInt(campo1.getText());
+            double opera2 = Integer.parseInt(campo2.getText());
+            double opera3 = Integer.parseInt(campo3.getText());
+		
+		
+		//hallamos la regla de 3
+		// Y = (B * X) / A
+		resultado = (opera2 * opera3 ) / opera1;
+                 String resulta = String.valueOf(resultado);
+		campo3.setText(resulta);
+		
     
     }
+    }
 }
+
 
