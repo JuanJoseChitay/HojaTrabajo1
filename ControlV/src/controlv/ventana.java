@@ -69,21 +69,10 @@ public class ventana extends  JFrame  implements ActionListener{
     public void actionPerformed(ActionEvent a) {
         
         
-     //boton 1 _-----------------------------------------------------------------------------------------
-        if (a.getSource() == operacion1) {
-             
-            double  opera1 = Integer.parseInt(campo1.getText());
-            double opera2 = Integer.parseInt(campo2.getText());
-            double resultado= Math.sqrt((opera1*opera1)+(opera2 * opera2));
-        
-           String result = String.valueOf(resultado);
-            campo3.setText(result);
-         
-           campo1.setText("");
-           campo2.setText("");
-           
+     
+       
           
-        }
+        
 
      // boton 4-----------------------------------------------------------------------------------------------
      if(a.getSource() == operacion4){
@@ -101,7 +90,25 @@ public class ventana extends  JFrame  implements ActionListener{
 		
     
     }
+     //boton 1 _-----------------------------------------------------------------------------------------
+      if (a.getSource() == operacion1) {
+             
+            double  opera1 = Integer.parseInt(campo1.getText());
+            double opera2 = Integer.parseInt(campo2.getText());
+            double resultado= Math.sqrt((opera1*opera1)+(opera2 * opera2));
+        
+           String result = String.valueOf(resultado);
+            campo3.setText(result);
+         
+           campo1.setText("");
+           campo2.setText("");
+           
+     
+     
+     
+      }
     }
+    
 }
 
 
