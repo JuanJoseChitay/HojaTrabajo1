@@ -68,12 +68,50 @@ public class ventana extends  JFrame  implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent a) {
         
+            
+     //boton 1 _-----------------------------------------------------------------------------------------
+        if (a.getSource() == operacion1) {
+             
+            double  opera1 = Integer.parseInt(campo1.getText());
+            double opera2 = Integer.parseInt(campo2.getText());
+            double resultado= Math.sqrt((opera1*opera1)+(opera2 * opera2));
         
-     
-       
+           String result = String.valueOf(resultado);
+            campo3.setText(result);
+         
+           campo1.setText("");
+           campo2.setText("");
+           
           
-        
+        }
+  // boton 2-----------------------------------------------------------------------------------------------
 
+      
+
+            
+  
+    
+    
+
+  //boton 3--------------------------------------------------------------------------------------------------
+     if(a.getSource() == operacion3){
+     
+     
+     String palabra = campo1.getText();
+     String palabra1 = campo2.getText();
+     String palabra3 = campo3.getText();
+             String sCadenaInvertida = "";
+            String CadenaInvertida = " ";
+     for (int x=palabra.length()-1;x>=0;x--)
+	  sCadenaInvertida = sCadenaInvertida + palabra.charAt(x);
+     for (int x=palabra1.length()-1;x>=0;x--)
+	  CadenaInvertida = CadenaInvertida + palabra1.charAt(x);
+     
+     campo3.setText(sCadenaInvertida+CadenaInvertida+palabra3);
+    
+     
+     }
+     
      // boton 4-----------------------------------------------------------------------------------------------
      if(a.getSource() == operacion4){
             double resultado;
@@ -90,25 +128,8 @@ public class ventana extends  JFrame  implements ActionListener{
 		
     
     }
-     //boton 1 _-----------------------------------------------------------------------------------------
-      if (a.getSource() == operacion1) {
-             
-            double  opera1 = Integer.parseInt(campo1.getText());
-            double opera2 = Integer.parseInt(campo2.getText());
-            double resultado= Math.sqrt((opera1*opera1)+(opera2 * opera2));
-        
-           String result = String.valueOf(resultado);
-            campo3.setText(result);
-         
-           campo1.setText("");
-           campo2.setText("");
-           
-     
-     
-     
-      }
-    }
     
+     
+       
+    }
 }
-
-
